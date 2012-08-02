@@ -26,39 +26,7 @@
     
     <body>
         
-        <div class="navbar navbar-fixed-top">
-            
-            <div class="navbar-inner">
-                
-                <div class="container">
-                    
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        
-                        <span class="icon-bar"></span>
-                        
-                        <span class="icon-bar"></span>
-                        
-                        <span class="icon-bar"></span>
-                    
-                    </a>
-                    
-                    <a class="brand" href="#">pyEvents</a>
-                        
-                    <div class="nav-collapse">
-                        
-                        <ul class="nav">
-                            
-                            <li class="active"><a href="#">Home</a></li>
-                            
-                            <li><a href="#newevent">Nuevo evento</a></li>
-                            
-                            <li><a href="#informes">Informes</a></li>
-                            
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
+        %include navbar 
 
         <div class="container">
             
@@ -106,18 +74,11 @@
 
             <hr>
             
-            <footer>
-                
-                <p>&copy; UNLUX - 2012</p>
-            
-            </footer>
+            %include footer
 
         </div> <!-- /container -->
         
-        <!-- Js Load
-        ================================================== -->
-        <!-- Se hace aca para optimizar la carga del sitio -->
-        <script src="{{ get_url('js', filename='jquery.min.js') }}"></script>
+        %include js_load get_url
         
     </body>
 
